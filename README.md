@@ -53,9 +53,17 @@ Sistem ini menggunakan struktur data berbasis dictionary untuk menyimpan informa
 ## Function
 
 - **read_mobil**: Menampilkan informasi mobil berdasarkan berbagai kategori (ID, nama, tahun, dll.).
-- **create_mobil**: Menambahkan mobil baru ke dalam sistem.
-- **update_mobil**: Memperbarui nama mobil atau status rental.
-- **delete_mobil**: Menghapus mobil dari sistem.
+- **create_mobil**: Menambahkan mobil baru ke dalam database
+- **update_mobil**: Memperbarui nama mobil atau status rental
+- **delete_mobil**: Menghapus mobil dari database
+
+
+## Penggunaan
+
+1. Clone repository ini ke komputer lokal tujuan
+2. Jalankan file Python
+3. Masuk menggunakan akun admin yang disediakan
+4. Gunakan menu untuk mengelola database Rental Mobil
 
 ## Contoh Interaksi
 
