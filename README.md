@@ -1,5 +1,5 @@
 # Rental Mobil
-Projek ini adalah aplikasi rental mobil sederhana menggunakan bahasa Python berbasis command line. Di aplikasi ini memungkinkan admin untuk mengelola data rental mobil seperti Menampilkan Daftar Mobil yang tersedia, Menambah Data Mobil baru, Memperbarui Informasi Mobil dan Menghapus Data Mobil.
+Projek ini adalah aplikasi Rental Mobil sederhana menggunakan bahasa Python berbasis command line. Di aplikasi ini memungkinkan admin untuk mengelola data rental mobil seperti Menampilkan Daftar Mobil yang tersedia, Menambah Data Mobil baru, Memperbarui Informasi Mobil dan Menghapus Data Mobil.
 
 ## Fitur
 
@@ -18,7 +18,7 @@ Projek ini adalah aplikasi rental mobil sederhana menggunakan bahasa Python berb
    - Memodifikasi Nama Mobil atau Status Rental Mobil berdasarkan ID mobil.
 
 4. **Menghapus Data Mobil**:
-   - Menghapus mobil dari sistem rental berdasarkan ID mobil.
+   - Menghapus mobil dari aplikasi berdasarkan ID mobil.
 
 ## Akun Admin
 
