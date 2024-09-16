@@ -38,11 +38,16 @@ Sistem ini menggunakan struktur data berbasis dictionary untuk menyimpan informa
 
 - **Data Rental Mobil**:
     ```python
-    rental_mobil = {
-        1190: {'Nama Mobil': "Honda Brio", 'Tahun Produksi': 2016, 'Harga Sewa Harian': 1000000, 'Status Rental': "Tersedia"},
-        1191: {'Nama Mobil': "Toyota Agya", 'Tahun Produksi': 2018, 'Harga Sewa Harian': 1200000, 'Status Rental': "Disewakan"},
-        # Mobil lainnya...
-    }
+   rental_mobil = {
+       1190: {'Nama Mobil': "Honda Brio", 'Tahun Produksi': 2016, 'Harga Sewa Harian': 1000000, 'Status Rental': "Tersedia"},
+       1191: {'Nama Mobil': "Toyota Agya", 'Tahun Produksi': 2018, 'Harga Sewa Harian': 1200000, 'Status Rental': "Disewakan"},
+       1292: {'Nama Mobil': "Honda Brio", 'Tahun Produksi': 2022, 'Harga Sewa Harian': 1500000, 'Status Rental': "Disewakan"},
+       1196: {'Nama Mobil': "Honda WRV", 'Tahun Produksi': 2024, 'Harga Sewa Harian': 1800000, 'Status Rental': "Tersedia"},
+       1290: {'Nama Mobil': "Toyota Innova", 'Tahun Produksi': 2016, 'Harga Sewa Harian': 1000000, 'Status Rental': "Disewakan"},
+       1170: {'Nama Mobil': "Toyota Yarris", 'Tahun Produksi': 2021, 'Harga Sewa Harian': 2000000, 'Status Rental': "Tersedia"},
+       1120: {'Nama Mobil': "Honda Jazz", 'Tahun Produksi': 2023, 'Harga Sewa Harian': 1500000, 'Status Rental': "Tersedia"},
+       1590: {'Nama Mobil': "Suzuki Ertiga", 'Tahun Produksi': 2016, 'Harga Sewa Harian': 1000000, 'Status Rental': "Disewakan"}
+   }
     ```
 
 ## Function
@@ -55,14 +60,23 @@ Sistem ini menggunakan struktur data berbasis dictionary untuk menyimpan informa
 ## Contoh Interaksi
 
 Selamat Datang di Rental Mobil Program
-Masukan Username Anda: anripal Masukan Password Anda: @Admin123
+
+Masukan Username Anda: anripal
+
+Masukan Password Anda: @Admin123
 
 ...Berhasil Masuk...
+
     Fitur :
+    
     1. Menampilkan Daftar Mobil
+    
     2. Menambah Data Mobil
+    
     3. Mengubah Data Mobil
+    
     4. Menghapus Data Mobil
+    
     5. Exit Program
 
 Masukkan fitur yang dipilih : 1
