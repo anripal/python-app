@@ -124,9 +124,13 @@ def update_mobil(id_mobil, nama_baru=None, status_baru=None):
         print("\nCoba lagi, Pilihan yang diinput tidak tersedia!")
 
 # Function DELETE
-def delete_mobil(id_mobil):
-    del rental_mobil[id_mobil]
-    print(f"Data mobil dengan ID {id_mobil} berhasil dihapus")
+def delete_mobil(id_mobil, delAll):
+    if delAll == 'yes':
+        rental_mobil.clear()
+        print(f"Semua data mobil berhasil dihapus")
+    else:
+        del rental_mobil[id_mobil]
+        print(f"Data mobil dengan ID {id_mobil} berhasil dihapus")
 
 while True:
     print("Selamat Datang di Rental Mobil Program")
@@ -136,7 +140,7 @@ while True:
     if userId == admin["username"] and userPass == admin["password"]:
         print("\n...Berhasil Masuk...")
         while True:
-            pilihanFitur = int(input('''
+            pilihanFitur = str(input('''
         Fitur :
         1. Menampilkan Daftar Mobil
         2. Menambah Data Mobil
@@ -147,9 +151,9 @@ while True:
 Masukkan fitur yang dipilih : '''))
             
             # Fitur READ
-            if pilihanFitur == 1:
+            if pilihanFitur == '1':
                 while True:
-                    userInput = int(input('''
+                    userInput = str(input('''
                 Menampilkan Daftar Mobil berdasarkan Kategori
                 1. Semua
                 2. ID Mobil
@@ -160,45 +164,45 @@ Masukkan fitur yang dipilih : '''))
                 7. ke Menu Utama
 
 Masukkan kategori yang dipilih : '''))
-                    if userInput == 1:
+                    if userInput == '1':
                         read_mobil(1)
                     
-                    elif userInput == 2:
+                    elif userInput == '2':
                         a = int(input("Masukkan ID Mobil: "))
                         read_mobil(2, a)
 
-                    elif userInput == 3:
+                    elif userInput == '3':
                         a = str(input("Masukkan Nama Mobil: "))
                         read_mobil(3, a)
 
-                    elif userInput == 4:
+                    elif userInput == '4':
                         a = int(input("Masukkan Tahun Produksi: "))
                         read_mobil(4, a)
 
-                    elif userInput == 5:
+                    elif userInput == '5':
                         a = int(input("Masukkan Harga Sewa Harian: "))
                         read_mobil(5, a)
 
-                    elif userInput == 6:
+                    elif userInput == '6':
                         a = str(input("Masukkan Status Rental (Tersedia/Disewakan): ")).capitalize()
                         read_mobil(6, a)
 
-                    elif userInput == 7:
+                    elif userInput == '7':
                         break
 
                     else:
                         print("\nCoba lagi, Pilihan yang diinput tidak tersedia!")
 
             # Fitur CREATE
-            elif pilihanFitur == 2:
+            elif pilihanFitur == '2':
                 while True:
-                    userInput = int(input('''
+                    userInput = str(input('''
                 Menambah Data Mobil
                 1. Input Data
                 2. ke Menu Utama
 
 Masukkan kategori yang dipilih : '''))
-                    if userInput == 1:
+                    if userInput == '1':
                         a = int(input("Masukkan ID Mobil (4 angka): "))
                         if a not in rental_mobil:
                             b = str(input("Masukkan Nama Mobil: "))
@@ -210,21 +214,21 @@ Masukkan kategori yang dipilih : '''))
                             create_mobil(a, b, c, d, e,f)
                         else:
                             print(f"Data mobil dengan ID {a} sudah ada")
-                    elif userInput == 2:
+                    elif userInput == '2':
                         break
                     else:
                         print("\nCoba lagi, Pilihan yang diinput tidak tersedia!")
        
             # Fitur UPDATE
-            elif pilihanFitur == 3:
+            elif pilihanFitur == '3':
                 while True:
-                    userInput = int(input('''
+                    userInput = str(input('''
                 Mengubah Data Mobil
                 1. Input Data
                 2. ke Menu Utama
 
 Masukkan kategori yang dipilih : '''))
-                    if userInput == 1:
+                    if userInput == '1':
                         id_mobil = int(input("Masukkan ID Mobil yang ingin diubah: "))
                         if id_mobil in rental_mobil:
                             read_mobil(2, id_mobil)
@@ -239,39 +243,42 @@ Masukkan kategori yang dipilih : '''))
                                 print("\nCoba lagi, Pilihan yang diinput tidak tersedia!")
                         else:
                             print(f"Data mobil dengan ID {id_mobil} tidak ada")
-                    elif userInput == 2:
+                    elif userInput == '2':
                         break
                     else:
                         print("\nCoba lagi, Pilihan yang diinput tidak tersedia!")
 
             # Fitur DELETE
-            elif pilihanFitur == 4:
+            elif pilihanFitur == '4':
                 while True:
-                    userInput = int(input('''
-                Menghapus Data Mobil
-                1. Input Data
-                2. ke Menu Utama
+                    userInput = str(input('''
+                Menghapus Data Mobil    
+                1. Input Manual
+                2. Hapus Semua
+                3. ke Menu Utama
 
 Masukkan kategori yang dipilih : '''))
-                    if userInput == 1:
+                    if userInput == '1':
                         id_mobil = int(input("Masukkan ID Mobil yang ingin dihapus: "))
                         if id_mobil in rental_mobil:
                             saved = str(input("Lanjut hapus data mobil? Ya/Tidak: "))
                             if saved.lower() == "ya":
-                                delete_mobil(id_mobil)
+                                delete_mobil(id_mobil, 'no')
                             elif saved.lower() == "tidak":
                                 print(f"Data mobil dengan ID {id_mobil} tidak dihapus")
                             else:
                                 print("\nCoba lagi, Pilihan yang diinput tidak tersedia!")
                         else:
                             print(f"Data mobil dengan ID {id_mobil} tidak ditemukan")
-                    elif userInput == 2:
+                    elif userInput == '2':
+                        delete_mobil(123, 'yes')
+                    elif userInput == '3':
                         break
                     else:
                         print("\nCoba lagi, Pilihan yang diinput tidak tersedia!")
 
             # EXIT
-            elif pilihanFitur == 5:
+            elif pilihanFitur == '5':
                 print("...Exit...")
                 break
 
