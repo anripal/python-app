@@ -1,7 +1,13 @@
-# **READ ME**
-Gunakan file ini sebagai panduan dalam menjalankan program.
+# Car Rental Management System
+![Alt text](https://github.com/anripal/python-app/blob/main/carrentalmanagementsoftware.png)
 
-Program ini dibuat sebagai Capstone Project pertama saya di Data Science & Machine Learning bootcamp yang diadakan oleh Purwadhika. Program ini terdiri dari empat fitur dasar pemograman, yaitu Create, Read, Update dan Delete (CRUD). Ini adalah program sederhana sebagai titik awal pengalaman saya di Data Science & Machine Learning. Mohon maklum dan dukungan nya! :)
+---
+
+Halo! tolong gunakan file ini sebagai panduan sebelum menjalankan Jupyter Notebook File.
+
+Notebook ini dibuat dengan tujuan akan menjadi portofolio dalam perjalanan saya sebagai Data Analyst. Mohon dimaklumi jika ada kesalahan, saya mencoba yang terbaik!
+
+---
 
 # Konsep Program
 Program ini adalah aplikasi Rental Mobil sederhana menggunakan bahasa Python berbasis command line. Di aplikasi ini, Admin sebagai Stakeholder diminta untuk melakukan login ke program agar dapat mengelola data rental mobil. Pengelolaan yang dimaksud yaitu Menampilkan Daftar Mobil yang tersedia, Menambah Data Mobil baru, Memperbarui Informasi Mobil dan Menghapus Data Mobil (CRUD)
@@ -101,3 +107,9 @@ Admin (user) dapat mengubah informasi data mobil, hanya untuk mobil yang ID nya 
 Admin (user) dapat menghapus data mobil yang diinginkan berdasarkan ID Mobil. Hanya ID Mobil yang memang ada di database yang akan di proses, jika ID Mobil tidak ada maka tidak dihapus.
    
 <img width="989" alt="Screenshot 2024-09-18 at 10 42 50 PM" src="https://github.com/user-attachments/assets/2ceae517-9d3a-47a1-a284-d70e8228233e">
+
+---
+
+Sekian,
+
+Terima Kasih!
